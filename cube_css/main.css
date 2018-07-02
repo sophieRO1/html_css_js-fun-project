@@ -1,0 +1,21 @@
+body {
+    background: #000;
+}
+
+.rotating-box {
+    width: 400px;
+    height: 400px;
+    margin: 30px auto;
+    perspective: 800px;
+   
+}
+
+.single-rb {
+    height: 400px;
+    width: 400px;
+}
+.single-rb div {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}

@@ -1,0 +1,49 @@
+body { 
+    margin: 0;
+    padding: 0;
+   background: #000;
+    
+}
+.main {
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.main h1:hover  {
+    color: palevioletred;
+    animation: popup 2s ease-in;
+
+
+    
+}
+@keyframes popup {
+   to {
+       transform: scale(2)
+   }
+}
+#particles.js {
+    height: 100vh;
+
+}
+
+.main button {
+   margin-top: 30px;
+   font-size: 40px;
+   text-align: center;
+   background: lightseagreen;
+   border: 3px solid transparent;
+   border-radius: 8px;
+}
+
+.main button:hover {
+    color: red;
+    animation: click 2s linear infinite;
+}
+@keyframes click {
+    100% {
+    transform: rotate(360deg);
+    }
+}

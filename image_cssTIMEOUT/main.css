@@ -1,0 +1,25 @@
+
+
+body {
+    background: #000;
+    margin:0;
+    padding: 0;
+}
+
+.first {
+
+     position: absolute;
+     top: 20%;
+     left: 13%;
+     display: none;
+}
+
+.second {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    display: none;
+}
+
+
+

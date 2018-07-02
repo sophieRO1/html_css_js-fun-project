@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>google maps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Google Map</h1>
+    <div id="map">
+
+    </div>
+
+    <script>
+        function initMap() {
+            // map options 
+            var options = {
+                    zoom: 8,
+                    center: {
+                        lat: 33.312805,
+                        lng: 44.361488
+                    }
+                }
+                // new map
+
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+            // add marker
+
+            // var marker = new google.maps.Marker({
+            //     position: {
+            //         lat: 36.191113,
+            //         lng: 44.009167
+            //     },
+            //     map: map,
+            //     icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+            // });
+
+            // var infowindow = new google.maps.InfoWindow({
+            //     content: '<h1>erbil</h1>'
+            // });
+
+            // marker.addListener('click', function() {
+            //     infowindow.open(map, marker);
+            // });
+
+            // another way 
+            // *******************************
+            // add marker 
+            function addMarker(coords) {
+                var marker = new google.maps.Marker({
+                    position: {
+                        lat: 36.191113,
+                        lng: 44.009167
+                    },
+                    map: map,
+                    icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                });
+
+            }
+
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk_gd15cAjL2l8BjDSWo1JW_SaGc4WK1U&callback=initMap" async defer></script>
+</body>
+
+</html>

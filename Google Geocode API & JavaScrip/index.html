@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>maps api google</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Baghdad Google Map Api</h3>
+    <div id="map"></div>
+    <script>
+        // got the map
+        function initMap() {
+
+            var options = {
+                zoom: 8,
+                center: {
+                    lat: 33.312805,
+                    lng: 44.361488
+                }
+            }
+
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+            // listen clikc for map 
+            google.maps.event.addListener(map, 'click', function(event) {
+                    addMarker({
+                        coords: event.latLng
+                    });
+
+                })
+                // first marker 
+                // got the marker 
+                // var marker = new google.maps.Marker({
+                //     position: {
+                //         lat: 33.420425,
+                //         lng: 44.297630
+                //     },
+                //     map: map,
+                //     icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                // });
+                // var InfoWindow = new google.maps.InfoWindow({
+                //     content: '<h1>known place</h1>'
+                // });
+
+            // marker.addListener('click', function() {
+            //     InfoWindow.open(map, marker);
+            // });
+
+
+            // ************************************
+
+            // markers array 
+            var markers = [{
+                    coords: {
+                        lat: 33.420425,
+                        lng: 44.297630
+                    },
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content: '<h1>map for paris</h1>'
+                }, {
+                    coords: {
+                        lat: 33.303257,
+                        lng: 44.354321
+                    },
+                    iconimage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content: '<h1>baghdad tower</h1>'
+                }, {
+                    coords: {
+                        lat: 33.335236,
+                        lng: 44.396927
+                    }
+                }]
+                // loop through marker
+            for (var i = 0; i < markers.length; i++) {
+                addMarker(markers[i])
+            }
+
+
+
+            // add marker function 
+
+            function addMarker(props) {
+
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map,
+                    icon: props.iconImage
+                });
+
+                // check icon image 
+                if (props.iconImage) {
+                    // set iconimage 
+                    marker.setIcon(props.iconImage);
+                }
+
+                // check info 
+                if (props.content) {
+                    var InfoWindow = new google.maps.InfoWindow({
+                        content: '<h1>known place</h1>'
+                    });
+
+                    marker.addListener('click', function() {
+                        InfoWindow.open(map, marker);
+                    });
+                }
+
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2FWtQLXAHM4X5svctzGHNAT3ZbG2_eU&callback=initMap">
+    </script>
+</body>
+
+</html>

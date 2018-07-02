@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>number facts</title>
+    <style>
+        body {
+            background: rgb(165, 155, 182);
+        }
+        
+        .container {
+            background: blue;
+            color: #fff;
+            margin-top: 40px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 6px;
+        }
+        
+        p {
+            font-family: sans-serif;
+            font-size: 20px;
+            margin-left: 6px;
+        }
+        
+        .input-text {
+            margin-left: 6px;
+        }
+        
+        #fact {
+            display: none;
+            height: 100px;
+        }
+        
+        #fact h4 {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12">
+                <h1>Number Fact</h1>
+                <p>enter a number and get the number fact </p>
+                <input type="number" id="numberInput" class="input-text white-text" placeholder="Enter any number...">
+
+
+                <!-- fact display -->
+
+
+                <div id="fact" class="card-content">
+
+                    <h4 class="card-action">Number fact</h4>
+
+                    <p id="factText" class="card-action">
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <script>
+        let fact = document.querySelector('#fact');
+        let factText = document.querySelector('#factText');
+
+        let numberInput = document.querySelector('#numberInput');
+
+        // numberInput.addEventListener('input', getFactAjax);
+
+
+
+
+        //    ajax 
+
+        //  function getFactAjax() {
+
+        // let number = numberInput.value;
+
+        // let xhr = new XMLHttpRequest();
+        // xhr.open('GET', 'http://numbersapi.com/' + number);
+        // xhr.onload = function() {
+        //     if (this.status == 200 && number != '') {
+
+        //         fact.style.display = "block";
+        //         factText.innerText = this.responseText;
+
+
+        //     }
+        // }
+
+        // xhr.send();
+
+        // }
+
+
+        // getFactAjax();
+
+        // fetch 
+
+        numberInput.addEventListener('input', getFactFetch);
+
+
+
+        function getFactFetch() {
+            let num = numberInput.value;
+
+            fetch('http://numbersapi.com/' + num)
+                .then(Response => Response.text())
+                .then(data => {
+                    if (num != '') {
+                        fact.style.display = 'block';
+                        factText.innerText = data;
+                    }
+
+
+                }).catch(err => console.log(err))
+        }
+    </script>
+</body>
+
+</ht

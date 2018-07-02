@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Change Background Color On Every Click</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+          
+        }
+
+        .container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 4px solid #fff;
+            animation: animate 2s infinite linear;
+           
+        }
+        .container h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 50px;
+        text-align: center;
+        margin-top: 115px;
+        
+        
+    
+        }
+
+        @keyframes animate {
+            0% {
+                background: rgb(197, 172, 61);
+                opacity: 0.2;
+            }
+
+            20% {
+                background: rgb(161, 81, 81);
+                opacity:0.5;
+            }
+            50% {
+                background: rgb(50, 67, 145);
+                opacity: 0.8;
+            }
+            70% {
+                background: rgb(138, 33, 103);
+                opacity: 0.9;
+            }
+            90% {
+                background: rgb(179, 207, 77);
+                opacity: .9;
+            }
+            100% {
+                background: rgb(56, 15, 39);
+                opacity: 1;
+            }
+        }
+    
+    
+    
+    
+    </style>
+</head>
+<body id="bg">
+    <div class="container">
+
+        <h1>hello</h1>
+
+    </div>
+
+ 
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    min-height: 200vh;
+}
+
+.logo {
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+.color {
+    /* margin-top: 50%;
+    margin-left: 40%;
+    margin-bottom: 40%; */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.waves-effect {
+    margin-left: 70%;
+}
+
+.rose {
+    margin-top: 200px;
+    font-weight: 300;
+    text-shadow: 2px 1px rgb(75, 21, 63);
+}
+
+.col.s3 {
+    margin-top: 100px;
+}

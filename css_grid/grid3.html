@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="grid.css">
+    <title>grid 3</title>
+    <style>
+        body {
+            background: #000;
+            color: azure;
+        }
+        /* grid system  */
+        /* ****************************** */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 1em;
+            justify-items: end;
+            align-items: center;
+
+        }
+
+
+   .box1 {
+       align-self: start;
+       justify-self: start;
+   }
+   .box2 {
+       align-self: end;
+       justify-self: center;
+   }
+   .box3 {
+       align-self: end;
+       justify-self: end;
+   }
+   .box4 {
+       align-self: stretch;
+       justify-content: stretch;
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .grid > div {
+            background: rgb(111, 168, 206);
+            padding: 1em;
+        }
+        .grid > div:nth-child(odd) {
+            background: rgb(96, 100, 41);
+        }
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div class="grid">
+
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body,
+h1 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-container h1 {
+    font-size: 150px;
+    color: rgba(255, 255, 255, .1);
+    background-image: url(color.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+    animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: left 0px top 10px;
+    }
+    40% {
+        background-position: left 800px top 10px;
+    }
+}
+
+.text-container {
+    margin-top: 17%;
+    text-align: center;
+}

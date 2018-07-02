@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>numbers fact </title>
+    <style>
+        body {
+             
+             color: #fff;
+        }
+      .card {
+         border-radius: 6px;
+          box-shadow: 5px 10px 18px rgb(117, 20, 85);
+      }
+        .card p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            color: #fff;
+        
+        }
+        .input-field {
+            color: #fff;
+        }
+        /* #fact {
+            display : none;
+        } */
+
+        
+
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card pink darken-4">
+                    <h2 class="pink lighten-3 white-text center">Number Fact</h2>
+                    <p class="center">enter a number and get a random fact</p>
+
+
+                    <input type="number" class="input-field center" id="numberInput" placeholder="enter the number ...">
+                    <div id="fact" class="card-action">
+                        <h4 class="card-title">Number Fact</h4>
+                        <p id="factText" class="card-content"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <script>
+
+
+        let fact = document.querySelector('#fact');
+        let  factText = document.querySelector('#factText');
+        let numberInput = document.querySelector('#numberInput');
+        
+
+        // REQUEST with ajax 
+        // numberInput.addEventListener('input', getFactAjax);
+        // function getFactAjax() {
+        //     let num = numberInput.value;
+        // //    make request 
+
+        // let xhr = new XMLHttpRequest();
+        // xhr.open('GET', 'http://numbersapi.com/'+ num);
+        // xhr.onload = function() {
+        //     if(this.status == 200 && num != '') {
+
+        //        fact.style.display = 'block';
+        //        factText.innerText = this.responseText;
+                
+        //     }
+        // }
+        // xhr.send();
+
+                      
+        // }
+// **************************************
+
+
+// REQUEST with fetch 
+
+numberInput.addEventListener('input', getFactFetch);
+
+
+
+function getFactFetch() {
+   let num = numberInput.value;
+
+   fetch('http://numbersapi.com/'+num)
+   .then(Response => Response.text())
+   .then(data => {
+       if(num != ''){
+        fact.style.display = 'block';
+       factText.innerText = data;
+       }
+      
+       
+   }).catch(err => console.log(err))
+}
+
+
+        
+
+        
+        
+
+
+
+
+    
+        
+
+        
+
+
+        
+
+    </script>
+
+</body>
+
+</html>

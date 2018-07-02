@@ -1,0 +1,23 @@
+body {
+    padding: 50px;
+    background: #333;
+}
+
+.box {
+    display: inline-block;
+    background: pink;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: animate 7s ease-in-out infinite;
+}
+
+@keyframes animate {
+    from {
+        height: 200px;
+    }
+    to {
+        height: 700px;
+        background: yellow;
+    }
+}  

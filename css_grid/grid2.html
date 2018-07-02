@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="grid.css">
+    <title>grid 2</title>
+    <style>
+        body {
+            background: #000;
+        }
+
+        /* grid system  */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-auto-rows:200px; */
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 1em;
+        }
+
+        /* nested grid  */
+        .nested {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(70px, auto);
+            grid-gap: 1em;
+        }
+        .nested > div {
+            border: 2px solid #333;
+            padding: 1em;
+            background: rgb(218, 161, 161);
+            color: antiquewhite
+        }
+        .grid > div {
+            background: rgb(106, 194, 139);
+            padding: 1em;
+        }
+        .grid > div:nth-child(odd) {
+            background: rgb(170, 63, 63);
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div class="nested">
+            <div>Lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>Lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>Lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+        </div>
+        <div>Lorem ipsum dolor Lorem  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae cum perferendis odit inventore ipsum perspiciatis dolore! Similique voluptatem repellendus optio, reiciendis ea excepturi quidem. Iste dolor harum voluptatum nulla, laboriosam minima vero id consequatur molestiae tempora laborum reiciendis animi accusantium.ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nam maxime voluptas ipsa quis corrupti quibusdam possimus necessitatibus dolorum nobis..</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+
+
+
+
+
+
+    </div>
+</body>
+</html>

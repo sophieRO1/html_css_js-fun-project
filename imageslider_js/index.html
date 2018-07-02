@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>full screen slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+  <div id="arrow-left" class="arrow"></div>
+
+  <div id="slider">
+    <div class="slide slide1">
+      <div class="slide-content">
+        <span>image one </span>
+      </div>
+    </div>
+
+    <div class="slide slide2">
+        <div class="slide-content">
+          <span>image two </span>
+        </div>
+      </div>
+
+      <div class="slide slide3">
+          <div class="slide-content">
+            <span>image three </span>
+          </div>
+        </div>
+
+  </div>
+
+
+  <div id="arrow-right" class="arrow"></div>
+ 
+</div>
+</body>
+
+
+<!-- js -->
+
+<script>
+
+  let sliderImages = document.querySelectorAll('.slide');
+  let arrow_r = document.querySelector('#arrow-right');
+  let arrow_l = document.querySelector('#arrow-left');
+
+
+  let current = 0;
+//  clear images 
+  function reset() {
+    for(let i = 0; i < sliderImages.length ; i ++ ) {
+
+      sliderImages[i].style.display = "none";
+
+
+    }
+  }
+//initailize the slider 
+
+function startSlide() {
+  reset();
+  sliderImages[0].style.display ="block";
+}
+//shwownext 
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+arrow_r.addEventListener('click', function() {
+  if(current == sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+})
+// show previous left 
+function slideLeft() {
+   reset();
+   sliderImages[current - 1].style.display ="block";
+   current--;
+ 
+}
+
+// event lisener 
+arrow_l.addEventListener('click', function() {
+  if(current == 0) {
+    current = sliderImages,length;
+  }
+  slideLeft();
+});
+startSlide();
+
+
+
+
+
+</script>
+
+</html>

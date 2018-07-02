@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="grid.css`">
+    <title>css grid</title>
+    <style>
+
+        /*********************** style ********************** */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr );
+            grid-gap: 1em;
+            
+        }
+
+        body {
+            background: #333;
+        }
+        .grid > div {
+            background: rgb(106, 194, 139);
+            padding: 1em;
+        }
+       
+        .grid > div:nth-child(odd) {
+            background: rgb(194, 103, 189);
+        }
+    
+    
+    
+    </style>
+</head>
+<body>
+
+    <!-- grid -->
+    <div class="grid">
+
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad temporibus omnis sequi reiciendis ut, fuga deleniti sed similique repudiandae eos cupiditate dolore quos distinctio atque asperiores quam illo assumenda voluptas, eaque ducimus laboriosam beatae animi quas rem. Dolorem inventore quae amet unde fugit at molestias, facilis suscipit, repellat illum labore magnam placeat ipsa. Optio harum aspernatur ducimus impedit consequatur ea eligendi. At reprehenderit ex magni quod accusamus nesciunt deleniti, labore blanditiis aut alias earum odit commodi assumenda ad tempora culpa</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corrupti expedita vel temporibus nihil deleniti accusamus nam, accusantium nesciunt, aut unde similique incidunt exercitationem reiciendis eius dignissimos. Expedita, ut impedit!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad temporibus omnis sequi reiciendis ut, fuga deleniti sed similique repudiandae eos cupiditate dolore quos distinctio atque asperiores quam illo assumenda voluptas, eaque ducimus laboriosam beatae animi quas rem. Dolorem inventore quae amet unde fugit at molestias, facilis suscipit, repellat illum labore magnam placeat ipsa. Optio harum aspernatur ducimus impedit consequatur ea eligendi. At reprehenderit ex magni quod accusamus nesciunt deleniti, labore blanditiis aut alias earum odit commodi assumenda ad tempora culpa</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corrupti expedita vel temporibus nihil deleniti accusamus nam, accusantium nesciunt, aut unde similique incidunt exercitationem reiciendis eius dignissimos. Expedita, ut impedit!</div>
+    </div>
+    
+</body>
+</html>

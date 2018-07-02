@@ -1,0 +1,96 @@
+                                body {
+                                    margin: 0;
+                                    padding: 0;
+                                    overflow: hidden;
+                                }
+                                
+                                section {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: radial-gradient(rgb(97, 22, 81), rgb(158, 81, 182));
+                                }
+                                
+                                #set {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                }
+                                
+                                #set div {
+                                    position: absolute;
+                                    display: block;
+                                }
+                                
+                                #set div:nth-child(1) {
+                                    left: 20%;
+                                    animation: rose 12s linear infinite;
+                                }
+                                
+                                #set div:nth-child(2) {
+                                    left: 50%;
+                                    animation: rose 20s linear infinite;
+                                }
+                                
+                                #set div:nth-child(3) {
+                                    left: 70%;
+                                    animation: rose 10s linear infinite;
+                                }
+                                
+                                #set div:nth-child(4) {
+                                    left: 30%;
+                                    animation: rose 25s linear infinite;
+                                }
+                                
+                                #set div:nth-child(5) {
+                                    left: 15;
+                                    animation: rose 7s linear infinite;
+                                }
+                                
+                                #set div:nth-child(6) {
+                                    left: 60%;
+                                    animation: rose1 30s linear infinite;
+                                }
+                                
+                                #set div:nth-child(7) {
+                                    left: 90%;
+                                    animation: rose1 20s linear infinite;
+                                }
+                                /* animations  */
+                                
+                                @keyframes rose {
+                                    0% {
+                                        top: -10%;
+                                        opacity: .5;
+                                    }
+                                    30% {
+                                        opacity: .6;
+                                        transform: rotate(45deg)
+                                    }
+                                    50% {
+                                        opacity: .8;
+                                    }
+                                    70% {
+                                        transform: rotate(48deg)
+                                    }
+                                    100% {
+                                        opacity: 1;
+                                        top: 110%
+                                    }
+                                }
+                                /* animation 2 */
+                                
+                                @keyframes rose1 {
+                                    0% {
+                                        top: 10%;
+                                        opacity: 0.4;
+                                        transform: translateY(10) scale(1)
+                                    }
+                                    100% {
+                                        top: 110%;
+                                        opacity: 1;
+                                        transform: traslateX(-10) scale(3);
+                                    }
+                                }

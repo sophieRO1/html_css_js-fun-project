@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        .container-1 {
+            display: flex;
+
+
+        }
+        .container-1 > div, .container-2 > div {
+            border: 1px solid #eee;
+            padding: 10px;
+            color: #eee;
+            flex-grow: 2;
+        }
+        .box-1 {
+            background: rgb(107, 15, 72);
+            flex: 1;
+            order: 3;
+           
+
+        }
+        .box-2 {
+            background: rgb(48, 7, 31);
+            flex: 2;
+            order: 1
+        
+
+        }
+        .box-3{
+            background: rgb(83, 13, 52);
+            flex: 1;
+            order: 2;
+           
+
+        }
+
+        .container-2 {
+            display: flex;
+            align-items: flex-end;
+            flex-basis: 30px;
+        }
+        .container-2.box-1 h3 {
+
+            align-self: flex-start;
+ 
+        }
+    
+    
+    
+    
+    </style>
+
+</head>
+<body>
+
+    <div class="container-1">
+        <div class="box-1">
+            <h3>one</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eligendi distinctio reprehenderit atque esse libero
+                cupiditate modi facere ipsam id reiciendis, nisi eum inventore quas deleniti a veritatis quaerat ex corporis nulla
+                pariatur. Reiciendis facilis et labore, saepe provident animi.</p>
+        </div>
+        <div class="box-1">
+            <h3>tow</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eligendi distinctio reprehenderit atque esse libero
+                cupiditate modi facere ipsam id reiciendis, nisi eum inventore quas deleniti a veritatis quaerat ex corporis nulla
+                pariatur. Reiciendis facilis et labore, saepe provident animi.</p>
+        </div>
+        <div class="box-1">
+            <h3>three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eligendi distinctio reprehenderit atque esse libero
+                cupiditate modi facere ipsam id reiciendis, nisi eum inventore quas deleniti a veritatis quaerat ex corporis nulla
+                pariatur. Reiciendis facilis et labore, saepe provident animi.</p>
+        </div>
+    </div>
+
+    
+    <div class="container-2">
+            <div class="container-2 box-1">
+                <h3>one</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eligendi distinctio reprehenderit atque esse libero
+                    cupiditate modi facere ipsam id reiciendis, nisi eum inventore quas deleniti a veritatis quaerat ex corporis nulla
+                    pariatur. Reiciendis facilis et labore, saepe provident animi.</p>
+            </div>
+            <div class="container-2 box-1">
+                <h3>tow</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eligendi distinctio reprehenderit atque esse libero
+                    cupiditate modi facere ipsam id reiciendis, nisi eum inventore quas deleniti a veritatis quaerat ex corporis nulla
+                    pariatur. Reiciendis facilis et labore, saepe provident animi.</p>
+            </div>
+            <div class="container-2  box-1">
+                <h3>three</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eligendi distinctio reprehenderit atque esse libero
+                    cupiditate modi facere ipsam id reiciendis, nisi eum inventore quas deleniti a veritatis quaerat ex corporis nulla
+                    pariatur. Reiciendis facilis et labore, saepe provident animi.</p>
+            </div>
+        </div>
+
+    
+    
+</body>
+</html>

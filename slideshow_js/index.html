@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>image slide </title>
+</head>
+<body>
+  
+
+     <img name="slide" width="500" height="300">
+
+     <script>
+
+         let i = 0;
+         let time = 2000;
+         let images = [];
+
+
+         images[0] = "8.jpg";
+         images[1] = "9.jpg";
+         images[2] = "14.jpg";
+         images[3] = "13.jpg";
+
+
+         // slide show function 
+
+         function changeImg() {
+             document.slide.src = images[i];
+
+             if(i < images.length -1) {
+                 i++;
+             } else {
+                 i = 0;
+
+             }
+             setTimeout("changeImg()", time);
+         }
+
+         window.onload = changeImg;
+
+     
+     
+     
+     
+     
+     </script>
+
+
+    
+    
+    
+    
+    
+  
+</body>
+</html>
